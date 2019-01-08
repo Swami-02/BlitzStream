@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-sm navbar-light fixed-top">
+        <div class="container">
+          <a class="navbar-brand navbar-name" href="/">BLITZstream</a>
+          <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                  {{#if user}}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/dashboard">Dashboard</a>
+                    </li class="nav-item">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/dashboard/streaming">StreamingSetup</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/users/logout">Logout</a>
+                    </li class="nav-item">
+                  {{else}}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/users/login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/users/register">Register</a>
+                    </li>
+                  {{/if}}
+              </ul>
+            </div>
+          </div>
+    </nav>

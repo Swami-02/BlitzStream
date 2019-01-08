@@ -1,0 +1,23 @@
+<div class="text-center mb-5">
+  <h1>Welcome {{username}}</h1>
+</div>
+
+<div class="row mt-5">
+  <div class="col-sm-6">
+    <div class="w-75 mx-auto">
+      <form action="/dashboard/search" method="GET">
+        <div class="row search">
+          <div class="col-sm-11">
+            <input type="search" placeholder="Search For Streamers" name="q" class="form-control search-field">
+          </div>
+          <div class="col-sm-1">
+            <button class="btn btn-search" type="submit"><i class="fa fa-search"></i></button>
+          </div>
+      </div>
+      </form>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <a href="/dashboard/streamKey"><button class="btn btn-stream">Start Your Stream</button></a>
+  </div>
+</div>

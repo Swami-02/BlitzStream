@@ -1,0 +1,15 @@
+<div class="text-center">
+  <h2>Search Results</h2>
+</div>
+<ul id="search-list">
+  {{#each users}}
+    <div class="row">
+      <div class="col-sm-2 search-item">
+        <li>{{this.username}}</li>
+      </div>
+      <div class="col-sm-2 search-item">
+        <button class="btn btn-inline dynamic-link" id="link-{{@index}}">Follow</button>
+      </div>
+    </div>
+  {{/each}}
+</ul>
