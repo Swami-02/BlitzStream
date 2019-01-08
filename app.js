@@ -23,7 +23,7 @@ app.listen(port, () => {
 app.use('/public', express.static('./public'));
 
 // Connect to mongoose
-mongoose.connect('mongodb://localhost/blitz-stream')
+mongoose.connect('YourMongoDatabaseURL')
   .then(() => console.log(`MongoDB Connected`))
   .catch(err => console.log(err));
 
@@ -51,7 +51,7 @@ app.set('view engine', 'handlebars');
 
 // Sessions Middleware
 app.use(session({
-  secret: 'secret',
+  secret: 'Yoursecret',
   resave: true,
   saveUninitialized: true
 }));
@@ -70,7 +70,7 @@ app.use((req, res, next) => {
   res.locals.error_msg = req.flash('error_msg');
   res.locals.error = req.flash('error');
   res.locals.user = req.user || null;
-  res.locals.serverIP = '192.168.117.29';
+  res.locals.serverIP = 'NginxServerIP';
   next();
 });
 
